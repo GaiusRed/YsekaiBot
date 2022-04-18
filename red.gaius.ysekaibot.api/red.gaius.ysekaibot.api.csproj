@@ -4,11 +4,27 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <CodeAnalysisRuleSet>stylecop.ruleset</CodeAnalysisRuleSet>
     <UserSecretsId>91f86d12-9d74-4fad-8f44-857d118b7be8</UserSecretsId>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.11" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.406">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <Target Name="CopyStatic" AfterTargets="Build">
+    <Message Text="Executing CopyStatic task" Importance="High" />
+    <ItemGroup>
+      <StaticWeb Include="$(ProjectDir)\..\red.gaius.ysekaibot.web\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(StaticWeb)" DestinationFolder="$(ProjectDir)\wwwroot\%(RecursiveDir)" />
+    <Copy SourceFiles="@(StaticWeb)" DestinationFolder="$(OutputPath)\wwwroot\%(RecursiveDir)" />
+  </Target>
 </Project>

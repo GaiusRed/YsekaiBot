@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<RuleSet Name="Rules for Ysekai Bot API" ToolsVersion="14.0">
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+        <Rule Id="SA0001" Action="None" /> <!-- XML comment analysis disabled -->
+        <Rule Id="SA0002" Action="None" /> <!-- Invalid settings file -->
+        <Rule Id="SA1200" Action="None" /> <!-- Using directive should appear w/in a namespace declaration -->
+        <Rule Id="SA1633" Action="None" /> <!-- The file header is missing at the top of the file -->
+    </Rules>
+    <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Features" RuleNamespace="Microsoft.CodeAnalysis">
+        <Rule Id="IDE0003" Action="None" /> <!-- Remove this or Me qualification -->
+    </Rules>
+</RuleSet>

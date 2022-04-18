@@ -22,11 +22,14 @@ jobs:
           dotnet-version: '6.0.x'
           include-prerelease: true
 
+      - name: dotnet test
+        run: dotnet test .\red.gaius.ysekaibot.tests\
+
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build .\red.gaius.ysekaibot.api\red.gaius.ysekaibot.api.csproj --configuration Release --self-contained --runtime win-x86
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish .\red.gaius.ysekaibot.api\red.gaius.ysekaibot.api.csproj --configuration Release --self-contained --runtime win-x86 -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
