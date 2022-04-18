@@ -55,6 +55,8 @@ builder.Services.AddSingleton<DiscordAuth>();
 
 builder.Services.AddMemoryCache();
 
+builder.Services.AddHostedService<DiscordBot>();
+
 // Build and run application
 var app = builder.Build();
 
