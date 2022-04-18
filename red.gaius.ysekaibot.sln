@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "red.gaius.ysekaibot.api", "red.gaius.ysekaibot.api\red.gaius.ysekaibot.api.csproj", "{30393BAB-43F2-4DB8-8484-ABC93B2F8AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "red.gaius.ysekaibot.tests", "red.gaius.ysekaibot.tests\red.gaius.ysekaibot.tests.csproj", "{795089E7-C916-428E-8776-4A104FEAFADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30393BAB-43F2-4DB8-8484-ABC93B2F8AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30393BAB-43F2-4DB8-8484-ABC93B2F8AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30393BAB-43F2-4DB8-8484-ABC93B2F8AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30393BAB-43F2-4DB8-8484-ABC93B2F8AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795089E7-C916-428E-8776-4A104FEAFADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795089E7-C916-428E-8776-4A104FEAFADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795089E7-C916-428E-8776-4A104FEAFADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795089E7-C916-428E-8776-4A104FEAFADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
